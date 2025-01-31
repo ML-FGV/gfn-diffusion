@@ -1,0 +1,50 @@
+{"time":"2025-01-29T17:53:53.918197-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:53:53.918262-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_175353-mfybdy5v/logs/debug-core.log"}
+{"time":"2025-01-29T17:53:53.918459-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:53:53.918476-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_175353-mfybdy5v/logs/debug-core.log"}
+{"time":"2025-01-29T17:53:53.925531-03:00","level":"INFO","msg":"created new stream","id":"mfybdy5v"}
+{"time":"2025-01-29T17:53:53.925619-03:00","level":"INFO","msg":"stream: started","id":"mfybdy5v"}
+{"time":"2025-01-29T17:53:53.925637-03:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-29T17:53:53.925684-03:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-29T17:53:53.925673-03:00","level":"INFO","msg":"sender: started","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-29T17:53:54.314163-03:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-29T17:53:54.315788-03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-29T18:48:13.307911-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T19:06:04.871543-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T19:20:17.014392-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T19:47:32.834789-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:07:13.645196-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:30:05.915282-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:30:08.559092-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:30:13.642246-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:31:43.522487-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T20:47:41.409483-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T21:04:43.237033-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T21:20:42.096944-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T21:38:26.965474-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T22:04:17.102103-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T22:17:45.779321-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T22:22:01.920877-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T22:45:04.550485-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T22:45:06.951852-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T23:02:18.543657-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T23:15:08.861579-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T23:15:22.21124-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-29T23:48:21.457459-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T00:15:39.147675-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T00:41:47.006965-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T01:19:47.90602-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T01:37:57.61606-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T01:53:57.052516-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:13:27.198497-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:13:54.01786-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:30:38.660857-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:30:50.831729-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:47:59.563768-03:00","level":"INFO","msg":"api: retrying HTTP request, no error or response"}
+{"time":"2025-01-30T02:48:38.910275-03:00","level":"INFO","msg":"stream: closing","id":"mfybdy5v"}
+{"time":"2025-01-30T02:48:38.910303-03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-30T02:48:38.910441-03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-30T02:48:42.234679-03:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-30T02:48:42.234699-03:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-30T02:48:42.23488-03:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"mfybdy5v"}}
+{"time":"2025-01-30T02:48:42.23504-03:00","level":"INFO","msg":"stream: closed","id":"mfybdy5v"}

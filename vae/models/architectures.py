@@ -3,7 +3,8 @@ import numpy as np
 from einops import rearrange
 from torch import nn
 import math
-
+from jaxtyping import Float, Int, Bool
+from torch import Tensor
 
 class TimeConder(nn.Module):
     def __init__(self, channel, out_dim, num_layers):
@@ -336,7 +337,8 @@ class TimeEncodingVAE(nn.Module):
 
 
 class StateEncodingVAE(nn.Module):
-    def __init__(self, s_dim: int, problem_dim: int = 784, hidden_dim: int = 64, s_emb_dim: int = 64, num_layers: int = 2):
+    def __init__(self, s_dim: int, problem_dim: int = 784, hidden_dim: int = 64, s_emb_dim: int = 64,
+                 num_layers: int = 2):
         super(StateEncodingVAE, self).__init__()
 
         self.x_model = nn.Sequential(nn.Linear(s_dim + problem_dim, hidden_dim),
@@ -350,6 +352,29 @@ class StateEncodingVAE(nn.Module):
 
     def forward(self, s, condition):
         return self.x_model(torch.cat([s, condition], dim=-1))
+
+
+class DeepSet(nn.Module):
+    def __init__(self, s_dim: int, hidden_dim: int = 64, embedding_dim: int = 64, out_dim: int = 1):
+        super().__init__()
+
+        self.phi = nn.Sequential(
+            nn.Linear(s_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, embedding_dim),
+            nn.ReLU()
+        )
+
+        self.rho = nn.Sequential(
+            nn.Linear(embedding_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, out_dim),
+        )
+
+    def forward(self, x : Float[Tensor, "batch set_size s_dim"]) -> Float[Tensor, "batch out_dim"]:
+        x = self.phi(x)
+        x = x.sum(dim=1)
+        return self.rho(x)
 
 
 class JointPolicyVAE(nn.Module):

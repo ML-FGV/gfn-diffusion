@@ -1,0 +1,101 @@
+GFN(
+  (t_model): TimeEncodingVAE(
+    (t_model): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=64, out_features=64, bias=True)
+    )
+  )
+  (s_model): StateEncodingVAE(
+    (x_model): Sequential(
+      (0): Linear(in_features=3, out_features=64, bias=True)
+      (1): GELU(approximate='none')
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (4): Linear(in_features=64, out_features=64, bias=True)
+    )
+  )
+  (d_model): DeepSet(
+    (phi): Sequential(
+      (0): Linear(in_features=2, out_features=64, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): ReLU()
+    )
+    (rho): Sequential(
+      (0): Linear(in_features=64, out_features=64, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (joint_model): JointPolicyVAE(
+    (model): Sequential(
+      (0): GELU(approximate='none')
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Linear(in_features=64, out_features=4, bias=True)
+    )
+  )
+  (flow_model): FlowModelVAE(
+    (model): Sequential(
+      (0): GELU(approximate='none')
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (langevin_scaling_model): LangevinScalingModelVAE(
+    (lgv_model): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): Sequential(
+        (0): GELU(approximate='none')
+        (1): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (2): Sequential(
+        (0): GELU(approximate='none')
+        (1): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (3): GELU(approximate='none')
+      (4): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+  0%|          | 0/25001 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 382, in <module>
+    train()
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 340, in train
+    metrics.update(eval_step(eval_data, energy, gfn_model, final_eval=False, condition=condition))
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 182, in eval_step
+    'eval/log_Z_learned'] = log_partition_function(
+  File "/Users/pedrodall/miniforge3/envs/energy_sampling_env/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/evaluations.py", line 8, in log_partition_function
+    states, log_pfs, log_pbs, log_fs = gfn.get_trajectory_fwd(initial_state, None, log_reward_fn, condition)
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/models/gfn.py", line 140, in get_trajectory_fwd
+    pfs, flow = self.predict_next_state(s, i * self.dt, log_r, condition)
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/models/gfn.py", line 109, in predict_next_state
+    s = self.s_model(s)
+  File "/Users/pedrodall/miniforge3/envs/energy_sampling_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/pedrodall/miniforge3/envs/energy_sampling_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() missing 1 required positional argument: 'condition'

@@ -1,0 +1,37 @@
+{
+  "os":  "macOS-14.6.1-arm64-arm-64bit",
+  "python":  "3.8.19",
+  "startedAt":  "2025-01-28T03:35:57.518289Z",
+  "program":  "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py",
+  "codePath":  "vae/train.py",
+  "git":  {
+    "remote":  "git@github.com:ML-FGV/gfn-diffusion.git",
+    "commit":  "15a0d78d6d2fd6cfc620ce0102e67f25f042fa94"
+  },
+  "email":  "pepedall@hotmail.com",
+  "root":  "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae",
+  "host":  "MacBook-Pro-de-Pedro-2.local",
+  "username":  "pedrodall",
+  "executable":  "/Users/pedrodall/miniforge3/envs/energy_sampling_env/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  10,
+  "cpu_count_logical":  10,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "364009357312"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  10,
+    "countLogical":  10
+  },
+  "gpuapple":  {
+    "gpuType":  "Apple M1 Pro",
+    "vendor":  "sppci_vendor_Apple",
+    "cores":  16
+  }
+}

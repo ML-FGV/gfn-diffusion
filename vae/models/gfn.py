@@ -52,7 +52,13 @@ class GFN(nn.Module):
         self.vae = True if energy == 'vae' else False
 
         self.t_model = TimeEncodingVAE(harmonics_dim, t_dim, hidden_dim)
-        self.s_model = StateEncodingVAE(dim, 784, hidden_dim, s_emb_dim, num_layers=2)
+        if self.vae:
+            self.s_model = StateEncodingVAE(dim, 784, hidden_dim, s_emb_dim, num_layers=2)
+        else:
+            prob_outdim = 1
+            self.s_model = StateEncodingVAE(dim, prob_outdim, hidden_dim, s_emb_dim, num_layers=2)
+            self.d_model = DeepSet(dim, hidden_dim, s_emb_dim, prob_outdim)
+
         self.joint_model = JointPolicyVAE(dim, s_emb_dim, t_dim, hidden_dim, 2 * dim, joint_layers, zero_init)
         if learn_pb:
             self.back_model = JointPolicyVAE(dim, s_emb_dim, t_dim, hidden_dim, 2 * dim, joint_layers, zero_init)
@@ -94,7 +100,11 @@ class GFN(nn.Module):
         bsz = s.shape[0]
         t = self.t_model(t).repeat(bsz, 1)
         if condition is not None:
-            s = self.s_model(s, condition)
+            if self.vae:
+                s = self.s_model(s, condition)
+            else:
+                condition = self.d_model(condition)
+                s = self.s_model(s, condition)
         else:
             s = self.s_model(s)
         s_new = self.joint_model(s, t)

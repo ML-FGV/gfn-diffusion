@@ -61,7 +61,7 @@ def get_gfn_optimizer(gfn_model, lr_policy, lr_flow, lr_back, back_model=False, 
                      {'params': gfn_model.s_model.parameters()},
                      {'params': gfn_model.joint_model.parameters()},
                      {'params': gfn_model.langevin_scaling_model.parameters()} ]
-    if conditional_flow_model or energy=='vae':
+    if conditional_flow_model or energy in ['vae', "linreg"]:
         param_groups += [ {'params': gfn_model.flow_model.parameters(), 'lr': lr_flow} ]
     else:
         param_groups += [ {'params': [gfn_model.flow_model], 'lr': lr_flow} ]

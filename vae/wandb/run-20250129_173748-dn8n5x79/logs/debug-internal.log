@@ -1,0 +1,11 @@
+{"time":"2025-01-29T17:37:48.303534-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:37:48.303878-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_173748-dn8n5x79/logs/debug-core.log"}
+{"time":"2025-01-29T17:37:48.303992-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:37:48.304003-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_173748-dn8n5x79/logs/debug-core.log"}
+{"time":"2025-01-29T17:37:48.310172-03:00","level":"INFO","msg":"created new stream","id":"dn8n5x79"}
+{"time":"2025-01-29T17:37:48.310232-03:00","level":"INFO","msg":"stream: started","id":"dn8n5x79"}
+{"time":"2025-01-29T17:37:48.31031-03:00","level":"INFO","msg":"sender: started","stream_id":{"value":"dn8n5x79"}}
+{"time":"2025-01-29T17:37:48.310268-03:00","level":"INFO","msg":"handler: started","stream_id":{"value":"dn8n5x79"}}
+{"time":"2025-01-29T17:37:48.310258-03:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"dn8n5x79"}}
+{"time":"2025-01-29T17:37:48.68474-03:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-29T17:37:48.685728-03:00","level":"INFO","msg":"Starting system monitor"}

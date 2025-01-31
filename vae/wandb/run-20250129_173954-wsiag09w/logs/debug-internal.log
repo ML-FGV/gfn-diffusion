@@ -1,0 +1,18 @@
+{"time":"2025-01-29T17:39:54.187088-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:39:54.18716-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_173954-wsiag09w/logs/debug-core.log"}
+{"time":"2025-01-29T17:39:54.187282-03:00","level":"INFO","msg":"using version","core version":"0.18.0"}
+{"time":"2025-01-29T17:39:54.187296-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250129_173954-wsiag09w/logs/debug-core.log"}
+{"time":"2025-01-29T17:39:54.194754-03:00","level":"INFO","msg":"created new stream","id":"wsiag09w"}
+{"time":"2025-01-29T17:39:54.194847-03:00","level":"INFO","msg":"stream: started","id":"wsiag09w"}
+{"time":"2025-01-29T17:39:54.194858-03:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:54.195014-03:00","level":"INFO","msg":"sender: started","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:54.194914-03:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:54.541119-03:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-01-29T17:39:54.542729-03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-29T17:39:55.340937-03:00","level":"INFO","msg":"stream: closing","id":"wsiag09w"}
+{"time":"2025-01-29T17:39:55.341593-03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-29T17:39:55.341619-03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-29T17:39:58.483586-03:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:58.48363-03:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:58.483845-03:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"wsiag09w"}}
+{"time":"2025-01-29T17:39:58.484422-03:00","level":"INFO","msg":"stream: closed","id":"wsiag09w"}

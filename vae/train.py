@@ -35,8 +35,7 @@ parser.add_argument('--epochs', type=int, default=25000)
 parser.add_argument('--subtb_lambda', type=int, default=2)
 parser.add_argument('--t_scale', type=float, default=5.)
 parser.add_argument('--log_var_range', type=float, default=4.)
-parser.add_argument('--energy', type=str, default='vae',
-                    choices=('vae'))
+parser.add_argument('--energy', type=str, default='vae')
 parser.add_argument('--mode_fwd', type=str, default="tb", choices=('tb', 'tb-avg', 'db', 'subtb', 'cond-tb-avg'))
 parser.add_argument('--mode_bwd', type=str, default="tb", choices=('tb', 'tb-avg', 'mle', 'cond-tb-avg'))
 parser.add_argument('--both_ways', action='store_true', default=False)
@@ -113,8 +112,8 @@ set_seed(args.seed)
 if 'SLURM_PROCID' in os.environ:
     args.seed += int(os.environ["SLURM_PROCID"])
 
-eval_data_size = 100
-final_eval_data_size = 100
+eval_data_size = 300
+final_eval_data_size = 300
 plot_data_size = 16
 final_plot_data_size = 16
 
@@ -134,6 +133,8 @@ if args.local_search:
 def get_energy():
     if args.energy == 'vae':
         energy = VAEEnergy(device=device, batch_size=args.batch_size)
+    elif args.energy == 'linreg':
+        energy = LinearEnergy(device=device, batch_size=args.batch_size)
     else:
         return NotImplementedError
     return energy
@@ -275,7 +276,7 @@ def train():
         os.makedirs(name)
 
     energy = get_energy()
-    if args.energy == 'vae':
+    if args.energy in ['vae', 'linreg']:
         eval_data = energy.sample(eval_data_size, evaluation=True).to(device)
         final_eval_data = energy.sample(final_eval_data_size, evaluation=True).to(device)
     else:
@@ -320,7 +321,7 @@ def train():
                              rank_weight=args.rank_weight, prioritized=args.prioritized)
     gfn_model.train()
     for i in trange(args.epochs + 1):
-        if args.energy == 'vae':
+        if args.energy in ['vae', 'linreg']:
             condition = energy.sample(args.batch_size)
         else:
             condition = None
@@ -332,7 +333,7 @@ def train():
         if args.scheduler == True:
             scheduler.step()
         if i % 100 == 0:
-            if args.energy == 'vae':
+            if args.energy in ['vae', 'linreg']:
                 condition = energy.sample(eval_data_size, evaluation=True)
             else:
                 condition = None
@@ -354,7 +355,7 @@ def train():
                     'loss': metrics['train/loss'],
                 }, f'{name}model.pt')
 
-    if args.energy == 'vae':
+    if args.energy in ['vae', 'linreg']:
         condition = energy.sample(eval_data_size, evaluation=True)
     else:
         condition = None

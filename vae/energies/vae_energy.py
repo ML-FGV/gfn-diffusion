@@ -29,7 +29,7 @@ class VAEEnergy():
         self.evaluation_subset = evaluation_subset.to(self.device)
 
         self.vae = VAE().to(self.device)
-        self.vae.load_state_dict(torch.load(_VAE_MODEL_PATH))
+        self.vae.load_state_dict(torch.load(_VAE_MODEL_PATH, map_location=self.device, weights_only=True))
 
         # setting vae params to not requiring gradient!
         for param in self.vae.parameters():
