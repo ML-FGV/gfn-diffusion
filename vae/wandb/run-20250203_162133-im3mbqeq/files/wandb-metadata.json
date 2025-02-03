@@ -1,0 +1,32 @@
+{
+  "os": "macOS-14.6.1-x86_64-i386-64bit",
+  "python": "3.11.10",
+  "startedAt": "2025-02-03T19:21:33.731820Z",
+  "program": "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py",
+  "codePath": "vae/train.py",
+  "git": {
+    "remote": "git@github.com:ML-FGV/gfn-diffusion.git",
+    "commit": "ee140604205a3bf25707dcb1625509ae495142bd"
+  },
+  "email": "pepedall@hotmail.com",
+  "root": "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae",
+  "host": "MacBook-Pro-de-Pedro-2.local",
+  "username": "pedrodall",
+  "executable": "/Users/pedrodall/opt/anaconda3/envs/basis-conditional-GflowNets/bin/python",
+  "codePathLocal": "train.py",
+  "cpu_count": 10,
+  "cpu_count_logical": 10,
+  "disk": {
+    "/": {
+      "total": "494384795648",
+      "used": "363990700032"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "cpu": {
+    "count": 10,
+    "countLogical": 10
+  }
+}

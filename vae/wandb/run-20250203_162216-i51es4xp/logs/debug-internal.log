@@ -1,0 +1,8 @@
+{"time":"2025-02-03T16:22:16.034966-03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-02-03T16:22:16.035014-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250203_162216-i51es4xp/logs/debug-core.log"}
+{"time":"2025-02-03T16:22:16.1698-03:00","level":"INFO","msg":"created new stream","id":"i51es4xp"}
+{"time":"2025-02-03T16:22:16.170119-03:00","level":"INFO","msg":"writer: Do: started","stream_id":"i51es4xp"}
+{"time":"2025-02-03T16:22:16.170239-03:00","level":"INFO","msg":"sender: started","stream_id":"i51es4xp"}
+{"time":"2025-02-03T16:22:16.170145-03:00","level":"INFO","msg":"stream: started","id":"i51es4xp"}
+{"time":"2025-02-03T16:22:16.170139-03:00","level":"INFO","msg":"handler: started","stream_id":"i51es4xp"}
+{"time":"2025-02-03T16:22:16.535096-03:00","level":"INFO","msg":"Starting system monitor"}

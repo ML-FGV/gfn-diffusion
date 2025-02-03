@@ -1,0 +1,26 @@
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Configure stats pid to 71363
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Loading settings from /Users/pedrodall/.config/wandb/settings
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Loading settings from /Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/settings
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-02-03 16:22:16,025 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'vae/train.py', 'program_abspath': '/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py', 'program': '/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py'}
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:_log_setup():533] Logging user logs to /Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250203_162216-i51es4xp/logs/debug.log
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:_log_setup():534] Logging internal logs to /Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250203_162216-i51es4xp/logs/debug-internal.log
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:init():619] calling init triggers
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'lr_policy': 0.001, 'lr_flow': 0.01, 'lr_back': 0.001, 'hidden_dim': 64, 's_emb_dim': 64, 't_emb_dim': 64, 'harmonics_dim': 64, 'batch_size': 300, 'buffer_size': 60000, 'T': 100, 'epochs': 25000, 'subtb_lambda': 2, 't_scale': 5.0, 'log_var_range': 4.0, 'energy': 'linreg', 'mode_fwd': 'tb', 'mode_bwd': 'tb', 'both_ways': False, 'repeats': 10, 'local_search': False, 'max_iter_ls': 200, 'burn_in': 100, 'ls_cycle': 100, 'ld_step': 0.001, 'ld_beta': 5.0, 'ld_schedule': False, 'target_acceptance_rate': 0.574, 'beta': 1.0, 'rank_weight': 0.01, 'prioritized': 'rank', 'scheduler': False, 'step_point': 7000, 'bwd': False, 'exploratory': False, 'sampling': 'buffer', 'langevin': False, 'langevin_scaling_per_dimension': False, 'conditional_flow_model': False, 'learn_pb': False, 'pb_scale_range': 0.1, 'learned_variance': False, 'partial_energy': False, 'exploration_factor': 0.1, 'exploration_wd': False, 'clipping': False, 'lgv_clip': 100.0, 'gfn_clip': 10000.0, 'zero_init': False, 'pis_architectures': False, 'lgv_layers': 3, 'joint_layers': 2, 'seed': 12345, 'weight_decay': 1e-07, 'use_weight_decay': False, 'eval': False, 'Experiment': '{args.energy}'}
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:init():669] starting backend
+2025-02-03 16:22:16,026 INFO    MainThread:71363 [wandb_init.py:init():673] sending inform_init request
+2025-02-03 16:22:16,027 INFO    MainThread:71363 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-02-03 16:22:16,027 INFO    MainThread:71363 [wandb_init.py:init():686] backend started and connected
+2025-02-03 16:22:16,032 INFO    MainThread:71363 [wandb_init.py:init():781] updated telemetry
+2025-02-03 16:22:16,072 INFO    MainThread:71363 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-02-03 16:22:16,528 INFO    MainThread:71363 [wandb_init.py:init():867] starting run threads in backend
+2025-02-03 16:22:16,644 INFO    MainThread:71363 [wandb_run.py:_console_start():2456] atexit reg
+2025-02-03 16:22:16,645 INFO    MainThread:71363 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-02-03 16:22:16,645 INFO    MainThread:71363 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-02-03 16:22:16,645 INFO    MainThread:71363 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-02-03 16:22:16,647 INFO    MainThread:71363 [wandb_init.py:init():911] run started, returning control to user process
+2025-02-03 16:22:19,624 WARNING MsgRouterThr:71363 [router.py:message_loop():75] message_loop has been closed

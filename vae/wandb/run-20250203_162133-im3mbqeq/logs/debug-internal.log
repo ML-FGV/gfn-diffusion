@@ -1,0 +1,16 @@
+{"time":"2025-02-03T16:21:33.751681-03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-02-03T16:21:33.751753-03:00","level":"INFO","msg":"created symlink","path":"/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/wandb/run-20250203_162133-im3mbqeq/logs/debug-core.log"}
+{"time":"2025-02-03T16:21:34.006214-03:00","level":"INFO","msg":"created new stream","id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:34.006777-03:00","level":"INFO","msg":"stream: started","id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:34.006862-03:00","level":"INFO","msg":"sender: started","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:34.006887-03:00","level":"INFO","msg":"handler: started","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:34.006762-03:00","level":"INFO","msg":"writer: Do: started","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:34.597582-03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-03T16:21:36.132988-03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-03T16:21:36.133072-03:00","level":"INFO","msg":"stream: closing","id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:36.137882-03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-03T16:21:39.35507-03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-03T16:21:39.644095-03:00","level":"INFO","msg":"handler: closed","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:39.644719-03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:39.64479-03:00","level":"INFO","msg":"sender: closed","stream_id":"im3mbqeq"}
+{"time":"2025-02-03T16:21:39.647466-03:00","level":"INFO","msg":"stream: closed","id":"im3mbqeq"}

@@ -1,0 +1,141 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.11.10
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "3":
+                - 13
+                - 16
+                - 23
+                - 55
+            "4": 3.11.10
+            "5": 0.18.7
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": darwin-x86_64
+Experiment:
+    value: '{args.energy}'
+T:
+    value: 100
+batch_size:
+    value: 300
+beta:
+    value: 1
+both_ways:
+    value: false
+buffer_size:
+    value: 60000
+burn_in:
+    value: 100
+bwd:
+    value: false
+clipping:
+    value: false
+conditional_flow_model:
+    value: false
+energy:
+    value: vae
+epochs:
+    value: 25000
+eval:
+    value: false
+exploration_factor:
+    value: 0.1
+exploration_wd:
+    value: false
+exploratory:
+    value: false
+gfn_clip:
+    value: 10000
+harmonics_dim:
+    value: 64
+hidden_dim:
+    value: 64
+joint_layers:
+    value: 2
+langevin:
+    value: false
+langevin_scaling_per_dimension:
+    value: false
+ld_beta:
+    value: 5
+ld_schedule:
+    value: false
+ld_step:
+    value: 0.001
+learn_pb:
+    value: false
+learned_variance:
+    value: false
+lgv_clip:
+    value: 100
+lgv_layers:
+    value: 3
+local_search:
+    value: false
+log_var_range:
+    value: 4
+lr_back:
+    value: 0.001
+lr_flow:
+    value: 0.01
+lr_policy:
+    value: 0.001
+ls_cycle:
+    value: 100
+max_iter_ls:
+    value: 200
+mode_bwd:
+    value: tb
+mode_fwd:
+    value: tb
+partial_energy:
+    value: false
+pb_scale_range:
+    value: 0.1
+pis_architectures:
+    value: false
+prioritized:
+    value: rank
+rank_weight:
+    value: 0.01
+repeats:
+    value: 10
+s_emb_dim:
+    value: 64
+sampling:
+    value: buffer
+scheduler:
+    value: false
+seed:
+    value: 12345
+step_point:
+    value: 7000
+subtb_lambda:
+    value: 2
+t_emb_dim:
+    value: 64
+t_scale:
+    value: 5
+target_acceptance_rate:
+    value: 0.574
+use_weight_decay:
+    value: false
+weight_decay:
+    value: 1e-07
+zero_init:
+    value: false

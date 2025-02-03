@@ -1,0 +1,99 @@
+GFN(
+  (t_model): TimeEncodingVAE(
+    (t_model): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): GELU(approximate='none')
+      (2): Linear(in_features=64, out_features=64, bias=True)
+    )
+  )
+  (s_model): StateEncodingVAE(
+    (x_model): Sequential(
+      (0): Linear(in_features=804, out_features=64, bias=True)
+      (1): GELU(approximate='none')
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (4): Linear(in_features=64, out_features=64, bias=True)
+    )
+  )
+  (joint_model): JointPolicyVAE(
+    (model): Sequential(
+      (0): GELU(approximate='none')
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Linear(in_features=64, out_features=40, bias=True)
+    )
+  )
+  (flow_model): FlowModelVAE(
+    (model): Sequential(
+      (0): GELU(approximate='none')
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): GELU(approximate='none')
+      )
+      (3): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (langevin_scaling_model): LangevinScalingModelVAE(
+    (lgv_model): Sequential(
+      (0): Linear(in_features=128, out_features=64, bias=True)
+      (1): Sequential(
+        (0): GELU(approximate='none')
+        (1): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (2): Sequential(
+        (0): GELU(approximate='none')
+        (1): Linear(in_features=64, out_features=64, bias=True)
+      )
+      (3): GELU(approximate='none')
+      (4): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+  0%|          | 0/25001 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 382, in <module>
+    train()
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 340, in train
+    metrics.update(eval_step(eval_data, energy, gfn_model, final_eval=False, condition=condition))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/train.py", line 182, in eval_step
+    'eval/log_Z_learned'] = log_partition_function(
+                            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/opt/anaconda3/envs/basis-conditional-GflowNets/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/evaluations.py", line 8, in log_partition_function
+    states, log_pfs, log_pbs, log_fs = gfn.get_trajectory_fwd(initial_state, None, log_reward_fn, condition)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/models/gfn.py", line 140, in get_trajectory_fwd
+    pfs, flow = self.predict_next_state(s, i * self.dt, log_r, condition)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/models/gfn.py", line 104, in predict_next_state
+    s = self.s_model(s, condition)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/opt/anaconda3/envs/basis-conditional-GflowNets/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/opt/anaconda3/envs/basis-conditional-GflowNets/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrodall/Documents/mestrado/projetos/gfn-diffusion/vae/models/architectures.py", line 354, in forward
+    return self.x_model(torch.cat([s, condition], dim=-1))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 300 but got size 100 for tensor number 1 in the list.
